@@ -1,0 +1,23 @@
+{
+  "mode": "two-machine",
+  "date": "2026-11-07",
+  "environment": {
+    "host": "vm",
+    "os": "Linux 6.18.44-fc-v310 (#1 SMP @0)",
+    "machine": "x86_64",
+    "python": "3.13.18",
+    "cryptography": "50.0.2"
+  },
+  "datagrams": 42,
+  "tcp_chunks": 24,
+  "secrets_absent": true,
+  "plaintext_frames": [
+    "HELLO",
+    "HELLO",
+    "HELLO_ACK",
+    "HELLO_ACK"
+  ],
+  "bit_flips": 3400,
+  "flips_accepted": 0,
+  "result": "ALL PASS"
+}

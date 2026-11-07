@@ -1,0 +1,11 @@
+# hol_check - 2026-11-07 11:51:32 +0000 - mode two-machine
+# {"host": "vm", "os": "Linux 6.18.44-fc-v310 (#1 SMP @0)", "machine": "x86_64", "python": "3.13.18", "cryptography": "50.0.2"}
+chunk 300 missing for 502 ms
+idle chat latency: median 2.6 ms, max 3.7 ms
+during the transfer: 52 messages, median 5.6 ms, max 10.6 ms
+while the chunk was missing: 5 messages, 2.1 to 4.6 ms
+FILE_DATA datagrams sent by client04: 8193 for 8192 chunks
+PASS: transfer completed, SHA-256 equal
+PASS: only the skipped chunk was sent twice
+PASS: chat not held back during the gap
+RESULT: ALL PASS

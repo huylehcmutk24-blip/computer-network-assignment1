@@ -1,0 +1,11 @@
+# browser_session - 2026-11-07 11:49:19 +0000 - mode two-machine
+# {"host": "vm", "os": "Linux 6.18.44-fc-v310 (#1 SMP @0)", "machine": "x86_64", "python": "3.13.18", "cryptography": "50.0.2"}
+PASS: S1 wrong password: 'Login denied (HTTP 403)'
+PASS: S1 all three online, each list shows 3 users; badge 'Online, server 10.20.0.1:9000'
+PASS: S2 public lines on all pages, private lines absent on client03
+PASS: S3 4 MiB file: COMPLETED, SHA-256 4746f048...b049b04e at both ends
+PASS: S5 both messages acknowledged during S4 (TRANSFERRING)
+PASS: S4 32 MiB file: COMPLETED, SHA-256 0e6743d6...26bb5a47 at both ends
+PASS: S6 client03 killed: the others see 2 users after 0.24 s and still chat
+client01 left running, pid 2473
+RESULT: ALL PASS

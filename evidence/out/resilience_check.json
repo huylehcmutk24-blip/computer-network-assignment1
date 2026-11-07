@@ -1,0 +1,64 @@
+{
+  "mode": "two-machine",
+  "date": "2026-11-07",
+  "environment": {
+    "host": "vm",
+    "os": "Linux 6.18.44-fc-v310 (#1 SMP @0)",
+    "machine": "x86_64",
+    "python": "3.13.18",
+    "cryptography": "50.0.2"
+  },
+  "client_ip": "10.20.0.2",
+  "chat_after_ms": 4.8,
+  "login_after_ms": 86,
+  "silent_close_s": 10.0,
+  "half_close_s": 10.0,
+  "probe_ports": {
+    "zero_frame": [
+      55486
+    ],
+    "reset": [
+      55496,
+      55504,
+      55518,
+      55526,
+      55530,
+      55536,
+      55546,
+      55552,
+      55564,
+      55574,
+      55576,
+      55590,
+      55594,
+      55610,
+      55616,
+      55622,
+      55626,
+      55634,
+      55636,
+      55648,
+      55650,
+      55656,
+      55660,
+      55664,
+      55666,
+      55672,
+      55682,
+      55688,
+      55690,
+      55704
+    ],
+    "silent": [
+      55714
+    ],
+    "half": [
+      55712
+    ]
+  },
+  "vanished_ms": 4.6,
+  "logout_ms": 3.2,
+  "mid_file_ms": 11.7,
+  "mid_file_code": "ENDPOINT_DISCONNECTED",
+  "result": "ALL PASS"
+}

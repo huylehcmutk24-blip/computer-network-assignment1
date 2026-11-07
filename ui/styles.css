@@ -1,0 +1,486 @@
+/* Plain CSS inspired by BK-LMS: blue navigation, a light gray background, and white panels. */
+:root {
+  --navbar: #0388b4;
+  --navbar-active: #044cc8;
+  --page: #f8f9fa;
+  --block: #ffffff;
+  --text: #656565;
+  --text-strong: #1d2125;
+  --heading: #044cc8;
+  --line: #dee2e6;
+  --input-line: #ced4da;
+  --primary: #0388b4;
+  --primary-hover: #02708f;
+  --own: #eaf5fa;
+  --ok: #357a32;
+  --danger-bg: #f7dddc;
+  --danger-line: #f4cfce;
+  --danger-text: #6e211e;
+  --footer: #495057;
+  --footer-text: #f8f9fa;
+  font-family: "Century Gothic", Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text);
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Grid/flex layout must not override the hidden attribute controlled by JavaScript. */
+[hidden] {
+  display: none !important;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--page);
+}
+
+h2,
+p {
+  margin: 0;
+}
+
+/* Top navigation styled after the LMS header. */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
+  padding: 0 16px;
+  background: var(--navbar);
+  color: #ffffff;
+}
+
+.brand {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  margin-left: -16px;
+  background: var(--navbar-active);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.navbar-right {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  align-items: center;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.status::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #f0ad4e;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.6);
+}
+
+.status[data-state="ONLINE"]::before {
+  background: #5cd65c;
+}
+
+.status[data-state="DISCONNECTED"]::before,
+.status[data-state="CLOSING"]::before {
+  background: #e05a4f;
+}
+
+.current-user {
+  font-weight: 700;
+}
+
+.current-user:empty {
+  display: none;
+}
+
+.nav-button {
+  padding: 6px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+  background: transparent;
+  color: #ffffff;
+}
+
+.nav-button:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.page {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+}
+
+.alerts {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.alerts:not(:has(.alert:not([hidden]))) {
+  display: none;
+}
+
+.alert {
+  padding: 12px 16px;
+  border: 1px solid var(--danger-line);
+  border-radius: 5px;
+  background: var(--danger-bg);
+  color: var(--danger-text);
+}
+
+/* Centered login panel. */
+.login-container {
+  max-width: 500px;
+  margin: 32px auto;
+  padding: 40px 32px;
+  background: var(--block);
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.login-container h2 {
+  margin-bottom: 24px;
+  color: var(--heading);
+  font-size: 22px;
+  font-weight: 400;
+  text-align: center;
+}
+
+form {
+  display: grid;
+  gap: 6px;
+}
+
+label {
+  margin-top: 6px;
+  color: var(--text-strong);
+  font-size: 14px;
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 7px 12px;
+  border: 1px solid var(--input-line);
+  border-radius: 5px;
+  background: #ffffff;
+  color: var(--text-strong);
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--primary);
+  outline: 0;
+  box-shadow: 0 0 0 3px rgba(3, 136, 180, 0.25);
+}
+
+button {
+  cursor: pointer;
+}
+
+.btn-primary {
+  justify-self: start;
+  margin-top: 12px;
+  padding: 8px 24px;
+  border: 0;
+  border-radius: 5px;
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--primary-hover);
+}
+
+.login-container .btn-primary {
+  justify-self: stretch;
+}
+
+button:disabled,
+input:disabled,
+select:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+button:focus-visible,
+.nav-button:focus-visible {
+  outline: 2px solid var(--navbar-active);
+  outline-offset: 2px;
+}
+
+/* Main layout: users on the left, chat and file transfers on the right. */
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 280px) minmax(0, 1fr);
+  grid-template-areas:
+    "users chat"
+    "users files";
+  align-items: start;
+  gap: 20px;
+}
+
+.users {
+  grid-area: users;
+}
+
+.chat {
+  grid-area: chat;
+}
+
+.files {
+  grid-area: files;
+}
+
+.block {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+  padding: 20px;
+  background: var(--block);
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 8px;
+}
+
+.block h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  color: var(--heading);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.badge {
+  min-width: 24px;
+  padding: 0 8px;
+  border-radius: 10px;
+  background: var(--primary);
+  color: #ffffff;
+  font-size: 13px;
+  text-align: center;
+}
+
+.note {
+  font-size: 13.5px;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul:empty::before,
+ol:empty::before {
+  content: attr(data-empty);
+  font-size: 14px;
+}
+
+#user-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--text-strong);
+  overflow-wrap: anywhere;
+}
+
+#user-list li::before {
+  content: "";
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #5cd65c;
+}
+
+#message-list {
+  max-height: 50vh;
+  min-height: 200px;
+  margin-bottom: 8px;
+  overflow-y: auto;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+}
+
+.message {
+  display: grid;
+  gap: 2px;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.message:last-child {
+  border-bottom: 0;
+}
+
+.message.own {
+  background: var(--own);
+}
+
+.message-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.message-who {
+  color: var(--heading);
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.message-text {
+  color: var(--text-strong);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.message-status {
+  justify-self: end;
+  font-size: 12.5px;
+}
+
+.message[data-status="sent"] .message-status {
+  color: var(--ok);
+}
+
+.message[data-status="failed"] .message-status {
+  color: var(--danger-text);
+  font-weight: 700;
+}
+
+/* Each transfer shows its filename, direction, progress, status, and actions. */
+#transfer-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.transfer {
+  display: grid;
+  gap: 4px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+}
+
+.transfer-name {
+  color: var(--text-strong);
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.transfer-route,
+.transfer-status {
+  font-size: 13.5px;
+  overflow-wrap: anywhere;
+}
+
+.transfer progress {
+  width: 100%;
+  height: 10px;
+  accent-color: var(--primary);
+}
+
+.transfer[data-status="COMPLETED"] .transfer-status {
+  color: var(--ok);
+  font-weight: 700;
+}
+
+.transfer[data-status="FAILED"] .transfer-status,
+.transfer[data-status="CANCELLED"] .transfer-status {
+  color: var(--danger-text);
+  font-weight: 700;
+}
+
+.transfer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.transfer-actions:not(:has(button:not([hidden]))) {
+  display: none;
+}
+
+.transfer-actions .btn-primary {
+  margin-top: 0;
+  padding: 4px 16px;
+}
+
+.btn-secondary {
+  padding: 4px 16px;
+  border: 1px solid var(--input-line);
+  border-radius: 5px;
+  background: #ffffff;
+  color: var(--text-strong);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: var(--page);
+}
+
+/* Dark gray footer inspired by the LMS. */
+.footer {
+  padding: 16px;
+  background: var(--footer);
+  color: var(--footer-text);
+  font-size: 13px;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "users"
+      "chat"
+      "files";
+  }
+
+  .login-container {
+    margin: 8px auto;
+    padding: 28px 20px;
+  }
+}

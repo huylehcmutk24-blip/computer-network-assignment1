@@ -1,0 +1,12 @@
+{
+  "bind_host": "0.0.0.0",
+  "server_host": "auto",
+  "discovery_port": 9002,
+  "tcp_port": 9000,
+  "udp_port": 9001,
+  "username": "client01",
+  "key_id": 1,
+  "keyring_path": "config/secrets/client01.keys.json",
+  "receive_dir": "downloads",
+  "log_path": "logs/client01.log"
+}

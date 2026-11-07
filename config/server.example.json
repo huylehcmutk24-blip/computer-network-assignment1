@@ -1,0 +1,9 @@
+{
+  "bind_host": "0.0.0.0",
+  "tcp_port": 9000,
+  "udp_port": 9001,
+  "discovery_port": 9002,
+  "keyring_path": "config/secrets/server.keys.json",
+  "users_path": "config/secrets/users.json",
+  "log_path": "logs/server.log"
+}

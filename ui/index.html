@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>StreamCollab</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <span class="brand">StreamCollab</span>
+      <div class="navbar-right">
+        <p id="connection-status" class="status" role="status" data-state="DISCONNECTED">
+          Opening the interface
+        </p>
+        <span id="current-user" class="current-user"></span>
+        <button id="logout-button" type="button" class="nav-button" hidden>Log out</button>
+      </div>
+    </nav>
+
+    <div class="page">
+      <div class="alerts">
+        <p id="link-problem" class="alert" role="alert" hidden></p>
+        <p id="error-message" class="alert" role="alert" hidden></p>
+      </div>
+
+      <section id="login-view" class="login-container" aria-labelledby="login-title">
+        <h2 id="login-title">Log in to StreamCollab</h2>
+        <form id="login-form">
+          <label for="username">Username</label>
+          <input id="username" autocomplete="username" required />
+          <label for="password">Password</label>
+          <input id="password" type="password" autocomplete="current-password" required />
+          <button id="login-button" type="submit" class="btn-primary">Log in</button>
+        </form>
+      </section>
+
+      <main id="app-view" class="layout" hidden>
+        <section class="block users" aria-labelledby="users-title">
+          <h2 id="users-title">Online users <span id="user-count" class="badge">0</span></h2>
+          <ul id="user-list" data-empty="No users online"></ul>
+        </section>
+
+        <section class="block chat" aria-labelledby="chat-title">
+          <h2 id="chat-title">Messages</h2>
+          <ol id="message-list" aria-live="polite" data-empty="No messages yet"></ol>
+          <form id="chat-form">
+            <label for="recipient">Send to</label>
+            <select id="recipient"><option value="">Public chat (everyone)</option></select>
+            <label for="message">Message</label>
+            <textarea id="message" rows="3" required></textarea>
+            <p id="message-limit" class="note"></p>
+            <button id="send-message-button" type="submit" class="btn-primary" disabled>Send</button>
+          </form>
+        </section>
+
+        <section class="block files" aria-labelledby="files-title">
+          <h2 id="files-title">File transfers</h2>
+          <form id="file-form">
+            <label for="file-recipient">File recipient</label>
+            <select id="file-recipient" disabled></select>
+            <label for="file-input">Choose a file</label>
+            <input id="file-input" type="file" required disabled />
+            <button id="send-file-button" type="submit" class="btn-primary" disabled>Send file</button>
+          </form>
+          <p class="note">Files are received automatically. Each client can send or receive one file at a time. Chat stays available, and you can cancel a transfer in progress.</p>
+          <ul id="transfer-list" aria-live="polite" data-empty="No file transfers yet"></ul>
+        </section>
+      </main>
+    </div>
+
+    <footer class="footer">
+      <p>StreamCollab · Computer Networks (CO3094) · Assignment 1 · Group 8</p>
+    </footer>
+  </body>
+</html>

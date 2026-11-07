@@ -1,0 +1,8 @@
+# discovery_check - 2026-11-07 11:51:27 +0000 - mode two-machine
+# {"host": "vm", "os": "Linux 6.18.44-fc-v310 (#1 SMP @0)", "machine": "x86_64", "python": "3.13.18", "cryptography": "50.0.2"}
+ANNOUNCE from 10.20.0.1: {'tcp_port': 9000, 'udp_port': 9001, 'online': 1, 'capacity': 20} (240 bytes)
+PASS: ANNOUNCE carries ports and counts, no username
+discovered 10.20.0.1:9000 (UDP 9001); times [0.5654890001096646, 0.39199599996209145, 0.3251909997743496, 0.28445499992812984, 0.22735699985787505]
+PASS: server reached on its LAN address
+PASS: client04 logged in via 10.20.0.1:9000
+RESULT: ALL PASS

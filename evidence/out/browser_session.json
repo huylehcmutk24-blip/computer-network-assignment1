@@ -1,0 +1,27 @@
+{
+  "mode": "two-machine",
+  "date": "2026-11-07",
+  "environment": {
+    "host": "vm",
+    "os": "Linux 6.18.44-fc-v310 (#1 SMP @0)",
+    "machine": "x86_64",
+    "python": "3.13.18",
+    "cryptography": "50.0.2"
+  },
+  "login_error": "Login denied (HTTP 403)",
+  "badge": "Online, server 10.20.0.1:9000",
+  "files": {
+    "sample-4MiB.bin": {
+      "status": "COMPLETED",
+      "sha256": "4746f048f6e3aa12906e05347b2f7fbe87a9778ba8a9caf0bd50cf99b049b04e",
+      "same": true
+    },
+    "dataset-32MiB.bin": {
+      "status": "COMPLETED",
+      "sha256": "0e6743d6ed32102cd7adeff7caa04190ee3504e92776341cfcd939c826bb5a47",
+      "same": true
+    }
+  },
+  "kill_seen_s": 0.243,
+  "result": "ALL PASS"
+}

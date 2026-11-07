@@ -1,0 +1,26 @@
+{
+  "mode": "two-machine",
+  "date": "2026-11-07",
+  "environment": {
+    "host": "vm",
+    "os": "Linux 6.18.44-fc-v310 (#1 SMP @0)",
+    "machine": "x86_64",
+    "python": "3.13.18",
+    "cryptography": "50.0.2"
+  },
+  "gap_ms": 502,
+  "idle_median_ms": 2.6,
+  "idle_max_ms": 3.7,
+  "during_messages": 52,
+  "during_median_ms": 5.6,
+  "during_max_ms": 10.6,
+  "gap_messages": 5,
+  "gap_min_ms": 2.1,
+  "gap_max_ms": 4.6,
+  "file_sends": 8193,
+  "chunks": 8192,
+  "sha256_equal": true,
+  "file_started_epoch": 1794052293.5497,
+  "file_finished_epoch": 1794052298.9949,
+  "result": "ALL PASS"
+}

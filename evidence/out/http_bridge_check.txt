@@ -1,0 +1,16 @@
+# http_bridge_check - 2026-11-07 15:31:22 +0000 - mode two-machine
+# {"host": "vm", "os": "Linux 6.18.44-fc-v310 (#1 SMP @0)", "machine": "x86_64", "python": "3.13.18", "cryptography": "50.0.2"}
+PASS: GET /api/state: HTTP 200 (expected 200)
+PASS: wrong password: HTTP 403 (expected 403)
+PASS: correct password: HTTP 200 (expected 200)
+PASS: foreign Host: HTTP 403 (expected 403)
+PASS: foreign Origin: HTTP 403 (expected 403)
+PASS: missing CSRF token: HTTP 403 (expected 403)
+PASS: path outside the allowlist: HTTP 404 (expected 404)
+PASS: no Content-Length: HTTP 411 (expected 411)
+PASS: not JSON: HTTP 415 (expected 415)
+PASS: command over 64 KiB: HTTP 413 (expected 413)
+PASS: upload over 100 MiB: HTTP 413 (expected 413)
+PASS: malformed request line: HTTP 400 (expected 400)
+PASS: event poll: 6 events
+RESULT: ALL PASS

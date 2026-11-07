@@ -1,0 +1,22 @@
+{
+  "mode": "two-machine",
+  "date": "2026-11-07",
+  "environment": {
+    "host": "vm",
+    "os": "Linux 6.18.44-fc-v310 (#1 SMP @0)",
+    "machine": "x86_64",
+    "python": "3.13.18",
+    "cryptography": "50.0.2"
+  },
+  "server_ip": "10.20.0.1",
+  "announce": {
+    "tcp_port": 9000,
+    "udp_port": 9001,
+    "online": 1,
+    "capacity": 20
+  },
+  "announce_bytes": 240,
+  "discovery_median_ms": 0.3,
+  "discovery_max_ms": 0.6,
+  "result": "ALL PASS"
+}

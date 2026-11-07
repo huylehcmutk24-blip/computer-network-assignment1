@@ -1,0 +1,2 @@
+# Runtime dependency; networking uses the Python standard library.
+cryptography==50.0.2

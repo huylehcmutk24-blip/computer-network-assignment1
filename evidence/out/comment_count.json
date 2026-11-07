@@ -1,0 +1,19 @@
+{
+  "mode": "source",
+  "date": "2026-11-07",
+  "environment": {
+    "host": "vm",
+    "os": "Linux 6.18.44-fc-v310 (#1 SMP @0)",
+    "machine": "x86_64",
+    "python": "3.13.18",
+    "cryptography": "50.0.2"
+  },
+  "modules": 12,
+  "functions": 310,
+  "documented": 310,
+  "comments": 562,
+  "comments_vietnamese": 518,
+  "js_functions": 44,
+  "js_commented": 44,
+  "result": "ALL PASS"
+}

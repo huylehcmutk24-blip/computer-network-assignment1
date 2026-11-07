@@ -1,0 +1,138 @@
+{
+  "mode": "two-machine",
+  "date": "2026-11-07",
+  "environment": {
+    "host": "vm",
+    "os": "Linux 6.18.44-fc-v310 (#1 SMP @0)",
+    "machine": "x86_64",
+    "python": "3.13.18",
+    "cryptography": "50.0.2"
+  },
+  "short_outage": {
+    "interruption_s": 3.1,
+    "session_ended": false,
+    "online_again_s": null,
+    "online_at_end": true,
+    "timeline": [
+      {
+        "t": -6.08,
+        "state": "ONLINE",
+        "attempt": 0,
+        "error": null
+      }
+    ]
+  },
+  "long_outage": {
+    "interruption_s": 20.1,
+    "session_ended": true,
+    "online_again_s": 21.57,
+    "online_at_end": true,
+    "timeline": [
+      {
+        "t": -12.06,
+        "state": "ONLINE",
+        "attempt": 0,
+        "error": null
+      },
+      {
+        "t": 6.45,
+        "state": "DISCONNECTED",
+        "attempt": 1,
+        "error": "TimeoutError"
+      },
+      {
+        "t": 7.46,
+        "state": "DISCONNECTED",
+        "attempt": 2,
+        "error": "OSError"
+      },
+      {
+        "t": 9.47,
+        "state": "DISCONNECTED",
+        "attempt": 3,
+        "error": "OSError"
+      },
+      {
+        "t": 13.45,
+        "state": "DISCONNECTED",
+        "attempt": 4,
+        "error": "OSError"
+      },
+      {
+        "t": 17.48,
+        "state": "DISCONNECTED",
+        "attempt": 5,
+        "error": "OSError"
+      },
+      {
+        "t": 21.47,
+        "state": "CONNECTED",
+        "attempt": 5,
+        "error": null
+      },
+      {
+        "t": 21.52,
+        "state": "AUTHENTICATED",
+        "attempt": 5,
+        "error": null
+      },
+      {
+        "t": 21.57,
+        "state": "ONLINE",
+        "attempt": 0,
+        "error": null
+      }
+    ]
+  },
+  "server_restart": {
+    "interruption_s": 3.6,
+    "session_ended": true,
+    "online_again_s": 5.53,
+    "online_at_end": true,
+    "timeline": [
+      {
+        "t": -7.69,
+        "state": "ONLINE",
+        "attempt": 0,
+        "error": null
+      },
+      {
+        "t": -1.59,
+        "state": "DISCONNECTED",
+        "attempt": 1,
+        "error": "ConnectionError"
+      },
+      {
+        "t": -0.58,
+        "state": "DISCONNECTED",
+        "attempt": 2,
+        "error": "ConnectionRefusedError"
+      },
+      {
+        "t": 1.44,
+        "state": "DISCONNECTED",
+        "attempt": 3,
+        "error": "ConnectionRefusedError"
+      },
+      {
+        "t": 5.43,
+        "state": "CONNECTED",
+        "attempt": 3,
+        "error": null
+      },
+      {
+        "t": 5.48,
+        "state": "AUTHENTICATED",
+        "attempt": 3,
+        "error": null
+      },
+      {
+        "t": 5.53,
+        "state": "ONLINE",
+        "attempt": 0,
+        "error": null
+      }
+    ]
+  },
+  "result": "ALL PASS"
+}

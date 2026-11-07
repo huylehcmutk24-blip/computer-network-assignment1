@@ -1,0 +1,9 @@
+# comment_count - 2026-11-07 15:40:50 +0000 - mode source
+# {"host": "vm", "os": "Linux 6.18.44-fc-v310 (#1 SMP @0)", "machine": "x86_64", "python": "3.13.18", "cryptography": "50.0.2"}
+Python modules at the project root: 12
+functions and methods: 310, with a docstring: 310
+comments: 562, of which in Vietnamese: 518
+without docstring: none
+ui/app.js top-level functions: 44, with a comment above: 44
+PASS: every function documented
+RESULT: ALL PASS

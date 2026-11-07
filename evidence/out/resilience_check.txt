@@ -1,0 +1,7 @@
+# resilience_check - 2026-11-07 11:51:49 +0000 - mode two-machine
+# {"host": "vm", "os": "Linux 6.18.44-fc-v310 (#1 SMP @0)", "machine": "x86_64", "python": "3.13.18", "cryptography": "50.0.2"}
+PASS: after the faults: chat in 4.8 ms, a new login in 86 ms
+PASS: silent connection closed after 10.00 s, half prefix after 10.00 s
+PASS: vanished client seen by others after 4.6 ms, LOGOUT after 3.2 ms
+PASS: receiver gone mid file: sender told in 11.7 ms (ENDPOINT_DISCONNECTED), stays online
+RESULT: ALL PASS

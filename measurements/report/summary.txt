@@ -1,0 +1,95 @@
+MeasureDate        2026-11-07
+AddrA              10.20.0.1
+AddrB              10.20.0.2
+SmallSeconds       12.7
+SmallMbps          0.33
+ShaSmall           4746f048\dots b049b04e
+ResSmall           PASS
+BigSeconds         98.8
+BigMbps            0.34
+ShaBig             0e6743d6\dots 26bb5a47
+ResBig             PASS
+ResDuring          PASS
+ChatDuringCount    2
+ChatDuringFile     2
+ChatCount          7
+ChatAckMedian      2.4
+ChatAckMax         4.6
+ResChat            PASS
+SessionTcp         10.20.0.2:39965
+SessionUdp         10.20.0.2:33551
+ResLogin           PASS
+KillLine           \code{SESSION\_ENDED user=client03}
+KillReason         \code{ConnectionError}
+ResKill            PASS
+ResLan             PASS
+CwndLosses         1
+CwndTimeouts       0
+CwndMin            5.6
+CwndSeconds        5.45
+CwndLossAt         0.67
+CwndRecoverMs      11
+HolGapMs           502
+HolIdleMedian      2.6
+HolGapCount        5
+HolGapRange        2.1 to 4.6
+HolDuringMedian    5.6
+HolDuringMax       10.6
+HolSends           8\,193
+HolChunks          8\,192
+ResHol             PASS
+ResLost            PASS
+EncDatagrams       42
+EncTcp             24
+EncFlips           3\,400
+EncAccepted        0
+ResEnc             PASS
+LoginClients       19
+LoginOnline        20
+LoginConcurrent    0.51
+LoginSequential    1.60
+LeaveCount         10
+LeaveSeen          18
+AddrMatch          19 of 19
+ResLogins          PASS
+ResScale           PASS
+ResetReasons       30 \code{ConnectionResetError}, 1 \code{ValueError}
+QuietReason        \code{TimeoutError}
+ResetChat          4.8
+ResetLogin         86
+SilentClose        10.00
+HalfClose          10.00
+VanishMs           4.6
+LogoutMs           3.2
+MidFileMs          11.7
+ResFaults          PASS
+ShortGap           3.1
+ShortResult        the session stayed \code{ONLINE}
+LongGap            20.1
+LongResult         the session ended after 6.5~s, and the client was \code{ONLINE} again 1.5~s after the link came back (attempt 5)
+RestartGap         3.6
+RestartResult      the session ended at once, and the client was \code{ONLINE} again 1.9~s after the server was started again (attempt 3)
+RestartDown        4.8
+RestartBack        2.3
+RestartAttempt     3
+ResOutage          PASS
+ResRestart         PASS
+DiscoveryMs        0.3
+DiscoveryMax       0.6
+DiscoveredIp       10.20.0.1
+AnnounceBytes      240
+ResDiscovery       PASS
+BridgeResult       12 of 12
+ResBridge          PASS
+DemoRuns           5 of 5
+DemoSameSeq        5 of 5
+DemoTimes          3.3 to 3.5
+RuffVersion        0.17.1
+RuffFiles          32
+RuffResult         no finding
+CommentDocs        310 of 310
+CommentCount       562
+CommentVi          518
+CommentJs          44
+
+0 of 93 values missing

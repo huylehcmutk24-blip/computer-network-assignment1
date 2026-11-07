@@ -1,0 +1,7 @@
+# concurrent_login - 2026-11-07 11:51:41 +0000 - mode two-machine
+# {"host": "vm", "os": "Linux 6.18.44-fc-v310 (#1 SMP @0)", "machine": "x86_64", "python": "3.13.18", "cryptography": "50.0.2"}
+19 logins one after another: 1.604 s; at once: 0.505 s
+PASS: every online list shows the 19 clients (20 users online)
+client02: TCP ['10.20.0.2', 49297], UDP port 52421
+10 clients closed together; the others saw it 0.018 s later
+RESULT: ALL PASS

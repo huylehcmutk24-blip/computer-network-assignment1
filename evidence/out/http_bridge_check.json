@@ -1,0 +1,40 @@
+{
+  "mode": "two-machine",
+  "date": "2026-11-07",
+  "environment": {
+    "host": "vm",
+    "os": "Linux 6.18.44-fc-v310 (#1 SMP @0)",
+    "machine": "x86_64",
+    "python": "3.13.18",
+    "cryptography": "50.0.2"
+  },
+  "statuses": {
+    "GET /api/state": 200,
+    "wrong password": 403,
+    "correct password": 200,
+    "foreign Host": 403,
+    "foreign Origin": 403,
+    "missing CSRF token": 403,
+    "path outside the allowlist": 404,
+    "no Content-Length": 411,
+    "not JSON": 415,
+    "command over 64 KiB": 413,
+    "upload over 100 MiB": 413,
+    "malformed request line": 400
+  },
+  "expected": {
+    "GET /api/state": 200,
+    "wrong password": 403,
+    "correct password": 200,
+    "foreign Host": 403,
+    "foreign Origin": 403,
+    "missing CSRF token": 403,
+    "path outside the allowlist": 404,
+    "no Content-Length": 411,
+    "not JSON": 415,
+    "command over 64 KiB": 413,
+    "upload over 100 MiB": 413,
+    "malformed request line": 400
+  },
+  "result": "ALL PASS"
+}
